@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Citas Médicas - Huellitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <span class="brand-huellitas">HUELLITAS</span>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="header-right">
+        <span class="user-icon" aria-hidden="true">👤</span>
+        <span class="user-name">Dra. Ojeda</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="paw-stack">
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+      </div>
+      <div class="sidebar-text">
+        <div>Clínica</div>
+        <div>veterinaria</div>
+      </div>
+    </aside>
+
+    <section class="dashboard">
+      <!-- Sección de registro de cita -->
+      <div class="appointment-form-section">
+        <form class="appointment-form-inline">
+          <div class="form-row-inline">
+            <div class="form-group-inline">
+              <label for="fecha">Fecha:</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group-inline">
+              <label for="hora">Hora:</label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+            <div class="form-group-inline">
+              <label for="paciente">Paciente:</label>
+              <input type="text" id="paciente" name="paciente" required>
+            </div>
+            <div class="form-group-inline">
+              <label for="dueno">Dueño:</label>
+              <input type="text" id="dueno" name="dueno" required>
+            </div>
+          </div>
+          
+          <div class="form-actions-inline">
+            <button type="submit" class="btn btn-save-inline">
+              <span class="btn-icon">📁</span>
+              <span class="btn-text">Guardar</span>
+            </button>
+            <button type="button" class="btn btn-exit-inline" onclick="window.location.href='index.html'">
+              <span class="btn-icon">🚪</span>
+              <span class="btn-text">Salir</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sección de tabla de citas -->
+      <div class="table-container">
+        <table class="appointments-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Paciente</th>
+              <th>Propietario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© <span id="year"></span> Huellitas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

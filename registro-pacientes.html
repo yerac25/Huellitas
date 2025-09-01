@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Registro de Pacientes - Huellitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <span class="brand-huellitas">HUELLITAS</span>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="header-right">
+        <span class="user-icon" aria-hidden="true">👤</span>
+        <span class="user-name">Dra. Ojeda</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="paw-stack">
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+      </div>
+      <div class="sidebar-text">
+        <div>Clínica</div>
+        <div>veterinaria</div>
+      </div>
+    </aside>
+
+    <section class="dashboard">
+      <div class="search-section">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar pacientes...">
+          <button class="search-btn" aria-label="Buscar">
+            <span class="search-icon">🔍</span>
+          </button>
+        </div>
+        <div class="logout-section">
+          <button class="btn-logout" onclick="window.location.href='index.html'">
+            <span class="logout-icon">🚪</span>
+            <span class="logout-text">Salir</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="patients-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Especie</th>
+              <th>Raza</th>
+              <th>F.Nac.</th>
+              <th>Propietario</th>
+              <th>Telefono</th>
+              <th>Correo</th>
+              <th>Dirección</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© <span id="year"></span> Huellitas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

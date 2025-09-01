@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Veterinaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <span class="brand-huellitas">HUELLITAS</span>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="header-right">
+        <span class="user-icon" aria-hidden="true">👤</span>
+        <span class="user-name">Dra. Ojeda</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="paw-stack">
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+      </div>
+      <div class="sidebar-text">
+        <div>Clínica</div>
+        <div>veterinaria</div>
+      </div>
+    </aside>
+
+    <section class="dashboard">
+      <div class="cards-grid">
+        <button class="card" onclick="window.location.href='citas-combinadas.html'">
+          <div class="card-icon" aria-hidden="true">📅</div>
+          <div class="card-title">Citas</div>
+        </button>
+        <button class="card" onclick="window.location.href='registro-pacientes.html'">
+          <div class="card-icon" aria-hidden="true">🩺</div>
+          <div class="card-title">Registro</div>
+        </button>
+        <button class="card" onclick="window.location.href='dueno.html'">
+          <div class="card-icon" aria-hidden="true">👥</div>
+          <div class="card-title">Cliente</div>
+        </button>
+        <button class="card" onclick="window.location.href='historial.html'">
+          <div class="card-icon" aria-hidden="true">📄</div>
+          <div class="card-title">Historial Medico</div>
+        </button>
+        <div class="illustration">
+          <img alt="Veterinaria con gato" src="Veterinaria-animada.png">
+        </div>
+        <button class="card" onclick="window.location.href='paciente.html'">
+          <div class="card-icon" aria-hidden="true">📁</div>
+          <div class="card-title">Pacientes</div>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© <span id="year"></span> Huellitas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+<noscript>Habilita JavaScript para una mejor experiencia.</noscript>
+</html>
+
+

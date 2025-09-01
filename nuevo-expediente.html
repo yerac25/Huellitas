@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Nuevo Expediente - Huellitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <span class="brand-huellitas">HUELLITAS</span>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="header-right">
+        <span class="user-icon" aria-hidden="true">👤</span>
+        <span class="user-name">Dra. Ojeda</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="paw-stack">
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+        <div class="paw" aria-hidden="true">🐾</div>
+      </div>
+      <div class="sidebar-text">
+        <div>Clínica</div>
+        <div>veterinaria</div>
+      </div>
+    </aside>
+
+    <section class="form-section">
+      <div class="form-container">
+        <h1 class="form-title">Nuevo Expediente Médico</h1>
+        
+        <form class="medical-record-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha-llegada">Fecha llegada:</label>
+              <input type="date" id="fecha-llegada" name="fecha-llegada" required>
+            </div>
+            <div class="form-group">
+              <label for="fecha-alta">Fecha Alta:</label>
+              <input type="date" id="fecha-alta" name="fecha-alta">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="servicio">Servicio:</label>
+              <input type="text" id="servicio" name="servicio" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="diagnostico">Diagnostico:</label>
+              <textarea id="diagnostico" name="diagnostico" rows="4" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="tratamiento">Tratamiento:</label>
+              <textarea id="tratamiento" name="tratamiento" rows="4" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-save">
+              <span class="btn-icon">✅</span>
+              <span class="btn-text">Guardar</span>
+            </button>
+            <button type="button" class="btn btn-exit" onclick="window.location.href='historial.html'">
+              <span class="btn-icon">🚪</span>
+              <span class="btn-text">Salir</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© <span id="year"></span> Huellitas. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
